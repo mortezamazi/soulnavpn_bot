@@ -31,14 +31,22 @@ def send_message(chat_id, text, keyboard=None):
 def main_menu():
     return {
         "inline_keyboard": [
-            [{"text": "🛒 خرید اشتراک", "callback_data": "buy"}],
-            [{"text": "💰 شارژ حساب", "callback_data": "charge"}],
-            [{"text": "📦 اشتراک‌های من", "callback_data": "subscriptions"}],
-            [{"text": "🎧 پشتیبانی", "callback_data": "support"}],
-            [{"text": "📖 راهنمای استفاده", "callback_data": "guide"}]
+            [
+                {"text": "🛒 خرید اشتراک", "callback_data": "buy"},
+                {"text": "🔄 تمدید سرویس", "callback_data": "renew"}
+            ],
+            [
+                {"text": "💰 شارژ حساب", "callback_data": "charge"},
+                {"text": "📦 اشتراک‌های من", "callback_data": "subscriptions"}
+            ],
+            [
+                {"text": "🎧 پشتیبانی", "callback_data": "support"},
+                {"text": "📖 راهنمای استفاده", "callback_data": "guide"}
+            ]
         ]
     }
 
+    }
 
 @app.route("/", methods=["GET"])
 def home():
